@@ -62,10 +62,22 @@ function SearchComponent(props) {
   }
   const Results = () => {
     if (username === "" || !userData)
-      return <img src={sinc} alt="" width={50} style={{ marginTop: "2em" }} />;
+      return (
+        <img
+          src={sinc}
+          alt=""
+          height={400}
+          style={{ marginTop: "2em", objectFit: "fill" }}
+        />
+      );
     if (isError)
       return (
-        <img src={notFound} alt="" width={50} style={{ marginTop: "2em" }} />
+        <img
+          src={notFound}
+          alt=""
+          height={400}
+          style={{ marginTop: "2em", objectFit: "fill" }}
+        />
       );
     else if (userData)
       return <DisplayUser isLoading={isLoading} userData={userData} />;

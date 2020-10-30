@@ -7,7 +7,7 @@
 .userCard {
   display: flex;
   align-items: center;
-  width: 70vw;
+  width: 90;
   height: 150px;
   margin-top: 2em;
   padding: 2.225em 1em;
@@ -17,7 +17,7 @@
   box-shadow: 2px 3.25px 0.75px 0.25px #303030;
 }
 .userCard__img {
-  width: 40%;
+  width: 30%;
   height: 100%;
   object-fit: cover;
 
