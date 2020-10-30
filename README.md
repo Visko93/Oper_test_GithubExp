@@ -2,9 +2,9 @@
 
 ---
 
-### PT - Inicie o projeto localmente ->
+### PT - Inicie o projeto localmente
 
-#### EN - Start the project locally->
+#### EN - Start the project locally :
 
 ```bash
   git clone https://github.com/Visko93/Oper_test_GithubExp
