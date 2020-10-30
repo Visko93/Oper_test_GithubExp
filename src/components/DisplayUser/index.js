@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   MdLanguage,
   MdSupervisorAccount,
@@ -25,7 +25,6 @@ const Container = () => (
 //https://api.github.com/users/%7BUSERNAME%7D
 //https://api.github.com/users/{USERNAME}/repos
 function DisplayUser({ isLoading, userData }) {
-  console.log(userData);
   return (
     <div className="userdata">
       {isLoading ? (
