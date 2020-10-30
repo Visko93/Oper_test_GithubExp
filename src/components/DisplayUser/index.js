@@ -24,51 +24,8 @@ const Container = () => (
 );
 //https://api.github.com/users/%7BUSERNAME%7D
 //https://api.github.com/users/{USERNAME}/repos
-function DisplayUser(props) {
-  const [user, setUser] = useState({});
-  const [isLoading, setisLoading] = useState(false);
-
-  const username = "visko93";
-  useEffect(() => {
-    setisLoading(true);
-    fetch(`https://api.github.com/users/${username}`)
-      .then((res) => res.json())
-      .then((data) => {
-        const {
-          name,
-          login,
-          location,
-          bio,
-          company,
-          followers,
-          following,
-          avatar_url,
-          public_repos,
-          public_gists,
-          subscriptions_url,
-        } = data;
-        setUser({
-          name,
-          login,
-          location,
-          bio,
-          company,
-          followers,
-          following,
-          avatar_url,
-          public_repos,
-          public_gists,
-          subscriptions_url,
-        });
-        setisLoading(false);
-      })
-      .catch((err) => {
-        setisLoading(false);
-        console.log(err);
-      });
-  }, [username]);
-  console.log(user);
-
+function DisplayUser({ isLoading, userData }) {
+  console.log(userData);
   return (
     <div className="userdata">
       {isLoading ? (
@@ -77,34 +34,37 @@ function DisplayUser(props) {
         <div className="userCard">
           <img
             className="userCard__img"
-            src={user.avatar_url}
-            alt={`Foto do usuário ${user.name}`}
+            src={userData.avatar_url}
+            alt={`Foto do usuário ${userData.name}`}
           />
           <div className="userCard__info">
-            <h2 className="userCard__info-username">{user.login}</h2>
-            <h4 className="userCard__info-name">{user.name}</h4>
+            <h2 className="userCard__info-username">{userData.login}</h2>
+            <h4 className="userCard__info-name">{userData.name}</h4>
             <ul className="userCard__list">
               <li className="userCard__list-item">
                 <MdLanguage />
-                {` Local: ${user.location}`}
+                <strong> Local: </strong>
+                {userData.location}
               </li>
               <li className="userCard__list-item">
                 <MdLocationSearching />
-                {` Bio: ${user.bio}`}
+                <strong> Bio: </strong>
+                {userData.bio}
               </li>
               <li className="userCard__list-item">
                 <MdViewCarousel />
-                {` Repositories: ${user.public_repos}`}
+                <strong> Repositories: </strong>
+                {userData.public_repos}
               </li>
               <li className="userCard__list-item">
                 <MdSupervisorAccount />
-                {` Followers: ${user.followers}`}
+                <strong> Followers: </strong>
+                {userData.followers}
               </li>
             </ul>
           </div>
         </div>
       )}
-      {console.log(<Container />)}
     </div>
   );
 }

@@ -19,8 +19,29 @@
   max-width: 450px;
   min-width: 350px;
 }
+.form__button {
+  border: 0.75px solid #57b952;
+  color: #57b952;
+  border-radius: 5px;
+  padding: 0.725em 1.5em;
+
+  font-weight: bold;
+
+  transition: background ease-in-out 250ms;
+}
+.form__input {
+  padding: 0.725em 1em;
+}
+.form__button:hover,
+.form__button:focus {
+  border: none;
+  background-color: #57b952;
+  color: aliceblue;
+}
 .form__inputFrame {
   display: flex;
   width: 100%;
+  margin-top: 2em;
   justify-content: space-around;
+  align-items: center;
 }
