@@ -1,0 +1,29 @@
+.userdata {
+  display: grid;
+  width: 80%;
+  position: relative;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  height: 150px;
+  margin-top: 2em;
+  padding: 1.225em;
+}
+.userCard__img {
+  width: 40%;
+  object-fit: scale-down;
+}
+.userCard__info {
+  margin-left: 1.25em;
+}
+.userCard__info-username {
+}
+.userCard__info-name {
+}
+.userCard__list {
+}
+.userCard__list-item {
+}

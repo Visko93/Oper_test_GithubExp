@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 500px;
+  min-height: 200px;
+}
+
+.form__header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 0 auto;
+  width: 50vw;
+  flex: 1;
+}
+.form__header img {
+  max-width: 450px;
+  min-width: 350px;
+}
+.form__inputFrame {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
